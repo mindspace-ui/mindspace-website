@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MindSpace — gentle tools for mindfulness, reflection, and everyday well-being.">
+  <title>MindSpace | A little space for you</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="MindSpace home">MindSpace</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#quiz">Quiz</a><a href="#flashcards">Flash Cards</a>
+      <a href="#advice">Advice</a><a href="#gallery">Pictures</a><a href="#poll">Polls</a>
+      <a href="#mood">Mood Tracker</a><a href="#breathing">Breathing</a><a href="#meditation">Meditation</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">PAUSE • BREATHE • BEGIN AGAIN</p>
+        <h1>A little space<br>for <em>your mind.</em></h1>
+        <p class="hero-intro">Welcome to MindSpace — a calm corner for checking in with yourself, learning small wellness habits, and remembering that you deserve care, too.</p>
+        <div class="hero-actions"><a class="button button-light" href="#mood">Check in with me</a><a class="text-link" href="#advice">Explore gentle advice ↓</a></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a peaceful garden" role="img">
+        <div class="sun"></div><div class="hill hill-back"></div><div class="hill hill-front"></div>
+        <div class="plant plant-one">✿</div><div class="plant plant-two">❋</div><div class="plant plant-three">✿</div>
+        <div class="art-note">grow at<br>your own pace</div>
+      </div>
+    </section>
+
+    <section class="welcome-strip">
+      <span class="tiny-flower">✳</span><p>You don't have to have everything figured out today. Start with one kind thing.</p><span class="tiny-flower">✳</span>
+    </section>
+
+    <section class="section" id="quiz">
+      <div class="section-heading"><p class="eyebrow">GET TO KNOW YOURSELF</p><h2>A gentle check-in quiz</h2><p>Answer these 10 simple questions about everyday stress, feelings, and self-care. There are no wrong answers.</p></div>
+      <div class="panel quiz-panel">
+        <div class="quiz-progress"><span id="quizStep">Question 1 of 3</span><span class="progress-track"><span id="quizProgress"></span></span></div>
+        <h3 id="quizQuestion">When you feel overwhelmed, what helps most?</h3>
+        <div id="quizOptions" class="option-list">
+          <button class="option" data-answer="quiet">A quiet moment on my own</button>
+          <button class="option" data-answer="people">Talking with someone I trust</button>
+          <button class="option" data-answer="move">Moving around or going outside</button>
+        </div>
+        <div id="quizResult" class="result-box" hidden></div>
+        <div class="quiz-controls"><button id="quizBack" class="button button-outline" disabled>Back</button><button id="quizNext" class="button button-green" disabled>Next question</button></div>
+      </div>
+    </section>
+
+    <section class="section soft-section" id="flashcards">
+      <div class="section-heading"><p class="eyebrow">LEARN IN LITTLE MOMENTS</p><h2>Mindful flash cards</h2><p>Explore all 25 cards. Tap or hover over a card to reveal a simple reminder about self-care and well-being.</p></div>
+      <div class="flash-grid" id="flashGrid">
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">01</span><span class="flash-front">What is self-care?</span><span class="flash-back">Doing small things that support your physical, emotional, and mental well-being.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">02</span><span class="flash-front">What is mindfulness?</span><span class="flash-back">Paying attention to the present moment without judging yourself.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">03</span><span class="flash-front">Why is rest important?</span><span class="flash-back">Rest gives your body and mind time to recover.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">04</span><span class="flash-front">What is self-compassion?</span><span class="flash-back">Treating yourself with patience and kindness, especially when things are hard.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">05</span><span class="flash-front">Name one grounding technique.</span><span class="flash-back">Notice things around you, such as what you can see, hear, and feel.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">06</span><span class="flash-front">What is a healthy boundary?</span><span class="flash-back">A limit that helps protect your time, energy, comfort, and values.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">07</span><span class="flash-front">Why talk about feelings?</span><span class="flash-back">Sharing feelings with a trusted person can help you feel heard and supported.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">08</span><span class="flash-front">What can you do when stressed?</span><span class="flash-back">Pause, breathe comfortably, break tasks into smaller steps, or ask for support.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">09</span><span class="flash-front">What is a positive affirmation?</span><span class="flash-back">A kind and encouraging statement you can remind yourself of.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">10</span><span class="flash-front">Does everyone feel emotions differently?</span><span class="flash-back">Yes. People respond to situations differently, and that is normal.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">11</span><span class="flash-front">What does empathy mean?</span><span class="flash-back">Trying to understand how another person may be feeling.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">12</span><span class="flash-front">How can you support a friend?</span><span class="flash-back">Listen without judging and ask what kind of support they need.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">13</span><span class="flash-front">What is active listening?</span><span class="flash-back">Giving someone your attention and trying to understand what they are saying.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">14</span><span class="flash-front">Why is sleep helpful?</span><span class="flash-back">Enough sleep supports mood, focus, learning, and general health.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">15</span><span class="flash-front">What is a coping strategy?</span><span class="flash-back">A healthy action that helps you handle a difficult feeling or situation.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">16</span><span class="flash-front">What can journaling help with?</span><span class="flash-back">It can help you reflect on thoughts, feelings, and experiences.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">17</span><span class="flash-front">Why spend time outdoors?</span><span class="flash-back">Fresh air and nature can offer a change of scene and a chance to pause.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">18</span><span class="flash-front">Is asking for help a weakness?</span><span class="flash-back">No. Asking for help can be a responsible and brave choice.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">19</span><span class="flash-front">What is emotional well-being?</span><span class="flash-back">Being able to notice feelings and find support and ways to manage them.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">20</span><span class="flash-front">How can you make a big task easier?</span><span class="flash-back">Break it into smaller steps and start with one manageable part.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">21</span><span class="flash-front">What does gratitude mean?</span><span class="flash-back">Noticing something you appreciate, even if it is something small.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">22</span><span class="flash-front">How can you be kind to yourself?</span><span class="flash-back">Use supportive words and remember that mistakes are part of learning.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">23</span><span class="flash-front">What is a mindful pause?</span><span class="flash-back">A short moment to stop, notice your surroundings, and breathe comfortably.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">24</span><span class="flash-front">Why are friendships important?</span><span class="flash-back">Supportive friendships can help people feel connected and understood.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+        <button class="flash-card" aria-pressed="false" type="button"><span class="flash-number">25</span><span class="flash-front">What is one reminder for a hard day?</span><span class="flash-back">You do not have to solve everything at once. Take one step at a time.</span><span class="flash-hint">Tap to reveal ↻</span></button>
+      </div>
+    </section>
+
+    <section class="section" id="advice">
+      <div class="section-heading"><p class="eyebrow">SMALL STEPS COUNT</p><h2>Advice for everyday well-being</h2><p>You don't need a perfect routine. Try one small thing that feels possible.</p></div>
+      <div class="advice-grid">
+        <article class="advice-card"><span class="advice-icon">☘</span><h3>Make room for rest</h3><p>Take short breaks between tasks. A pause is part of caring for yourself, not a failure to be productive.</p></article>
+        <article class="advice-card"><span class="advice-icon">☏</span><h3>Reach out</h3><p>Share what you're feeling with a trusted friend, family member, teacher, or counselor when you need support.</p></article>
+        <article class="advice-card"><span class="advice-icon">☼</span><h3>Keep it simple</h3><p>Drink water, stretch if it feels comfortable, get some fresh air, or do one manageable task.</p></article>
+        <article class="advice-card"><span class="advice-icon">♡</span><h3>Talk kindly to yourself</h3><p>Replace “I should be doing better” with “I'm learning, and I can take this one step at a time.”</p></article>
+      </div>
+    </section>
+
+    <section class="section soft-section" id="gallery">
+      <div class="section-heading"><p class="eyebrow">A VISUAL BREATH</p><h2>Little moments of calm</h2><p>Nature and peaceful scenes for a brief mental reset. Images load from Unsplash's image service; replace them with your chosen Google Images results only when you have permission to use those images.</p></div>
+      <div class="gallery-grid">
+        <figure><img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=900&q=80" alt="Golden sunlight across a peaceful meadow" loading="lazy"><figcaption>Let the day unfold</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80" alt="Sunlight filtering through a green forest" loading="lazy"><figcaption>Find a little stillness</figcaption></figure>
+        <figure><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=80" alt="Quiet lake and mountain landscape" loading="lazy"><figcaption>One breath at a time</figcaption></figure>
+      </div>
+      <p class="image-note">Tip: Google Images is a search tool, not a blanket license. Check the source and usage rights before reusing a picture.</p>
+    </section>
+
+    <section class="section" id="poll">
+      <div class="section-heading"><p class="eyebrow">YOUR VOICE MATTERS</p><h2>Community poll</h2><p>What helps you reset after a long day?</p></div>
+      <div class="panel poll-panel"><form id="pollForm">
+        <label class="poll-choice"><input type="radio" name="poll" value="music" required> Listening to music</label>
+        <label class="poll-choice"><input type="radio" name="poll" value="nature"> Spending time outdoors</label>
+        <label class="poll-choice"><input type="radio" name="poll" value="people"> Talking to someone</label>
+        <label class="poll-choice"><input type="radio" name="poll" value="quiet"> Quiet time or journaling</label>
+        <button class="button button-green" type="submit">Cast my vote</button>
+      </form><div id="pollResults" class="poll-results" aria-live="polite"><p>Vote to see the results on this device.</p></div><p class="small-note">Demo poll: votes are stored only in this open page and are not sent to a server.</p></div>
+    </section>
+
+    <section class="section soft-section" id="mood">
+      <div class="section-heading"><p class="eyebrow">NO JUDGMENT, JUST NOTICE</p><h2>How are you feeling?</h2><p>Pick the mood that best describes this moment. Every feeling is allowed.</p></div>
+      <div class="panel mood-panel">
+        <div class="mood-options" role="group" aria-label="Choose your mood">
+          <button class="mood-button" data-mood="happy"><span>☀</span> Happy</button><button class="mood-button" data-mood="calm"><span>☁</span> Calm</button><button class="mood-button" data-mood="tired"><span>☾</span> Tired</button><button class="mood-button" data-mood="anxious"><span>〰</span> Anxious</button><button class="mood-button" data-mood="sad"><span>☂</span> Sad</button><button class="mood-button" data-mood="mixed"><span>✳</span> Mixed</button>
+        </div>
+        <div id="moodMessage" class="mood-message" aria-live="polite">Your mood is information, not a verdict. Choose an option to check in.</div>
+        <button id="clearMood" class="text-button">Clear check-in</button>
+      </div>
+    </section>
+
+    <section class="section" id="breathing">
+      <div class="section-heading"><p class="eyebrow">COME BACK TO THE PRESENT</p><h2>Guided breathing</h2><p>Try a gentle, comfortable rhythm. Never force your breath; stop if you feel dizzy or uncomfortable.</p></div>
+      <div class="breathing-layout panel">
+        <div class="breath-orb" id="breathOrb"><span id="breathWord">Ready?</span></div>
+        <div class="breath-instructions"><h3>A simple breathing pause</h3><p id="breathStatus">When you're ready, start a one-minute guided session. Breathe naturally and comfortably.</p><div class="breath-controls"><button class="button button-green" id="breathStart">Start breathing</button><button class="button button-outline" id="breathStop" disabled>Stop</button></div><p class="small-note">This is a relaxation exercise, not medical advice. It's okay to breathe normally instead.</p></div>
+      </div>
+    </section>
+
+    <section class="section soft-section" id="affirmations">
+      <div class="section-heading"><p class="eyebrow">WORDS TO CARRY WITH YOU</p><h2>Affirmations for today</h2><p>Keep what feels helpful; you don't have to force yourself to believe every phrase.</p></div>
+      <div class="quote-card"><span class="quote-mark">“</span><blockquote id="affirmationText">I can take things one step at a time.</blockquote><p class="quote-caption">A gentle reminder, just for you</p><button id="newAffirmation" class="button button-light">Another affirmation ↗</button></div>
+    </section>
+
+    <section class="section" id="meditation">
+      <div class="section-heading"><p class="eyebrow">SLOW DOWN A LITTLE</p><h2>A mini meditation</h2><p>A short, self-guided practice for when you want to pause.</p></div>
+      <div class="meditation-steps">
+        <article><span>01</span><h3>Settle in</h3><p>Find a comfortable position. Let your shoulders rest if that feels good.</p></article>
+        <article><span>02</span><h3>Notice</h3><p>Notice the support beneath you, the sounds around you, and your natural breathing.</p></article>
+        <article><span>03</span><h3>Return gently</h3><p>If your mind wanders, that's normal. Bring your attention back without scolding yourself.</p></article>
+      </div>
+      <div class="closing-note"><span>✿</span><p>Well-being isn't about feeling good all the time. It's about meeting yourself with care, in whatever moment you're in.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#home">MindSpace</a>
+    <p>Made with care for your everyday well-being.</p>
+    <a class="contact-email" href="mailto:mindspace083@gmail.com">mindspace083@gmail.com</a>
+    <p class="copyright">© <span id="year"></span> MindSpace · Take care, at your own pace.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
